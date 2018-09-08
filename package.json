@@ -1,0 +1,36 @@
+{
+  "name": "echo_node",
+  "version": "1.0.0",
+  "description": "Simple Node Application echoing Request HTTP headers",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/*.js src/routes/*.js",
+    "build": "babel -d ./dist ./src",
+    "prebuild": "rm -rf build/*",
+    "apidoc": "apidoc -i src/routes/ -o public/apidoc",
+    "start": "NODE_ENV=production node ./dist/index.js",
+    "prestart": "npm run-script build",
+    "test": "NODE_ENV=test mocha --exit  test/*.js test/**/*.js",
+    "test-debug": "NODE_ENV=test mocha --inspect-brk --exit test/**/*.js"
+  },
+  "author": "Xavier Foxy",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "express": "^4.16.3",
+    "jsdoc": "^3.5.5",
+    "morgan": "^1.9.0",
+    "swagger-jsdoc": "^3.0.3",
+    "swagger-ui-express": "^4.0.1",
+    "winston": "^3.0.0"
+  },
+  "devDependencies": {
+    "apidoc": "^0.17.6",
+    "babel-register": "^6.26.0",
+    "chai": "^4.1.2",
+    "eslint": "^5.5.0",
+    "mocha": "^5.2.0",
+    "supertest": "^3.2.0"
+  }
+}
