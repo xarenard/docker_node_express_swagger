@@ -13,6 +13,8 @@ RUN npm install
 RUN mkdir src
 ADD src/ src/
 
+RUN npm run-script build
+
 EXPOSE 8084
 
-CMD ["npm", "start"]
+CMD ["npm", "run-script","launch"]

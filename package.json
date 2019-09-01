@@ -10,6 +10,7 @@
     "apidoc": "apidoc -i src/routes/ -o public/apidoc",
     "start": "NODE_ENV=production node ./dist/index.js",
     "prestart": "npm run-script build",
+    "launch": "NODE_ENV=production node ./dist/index.js",
     "test": "NODE_ENV=test mocha --exit  test/*.js test/**/*.js",
     "test-debug": "NODE_ENV=test mocha --inspect-brk --exit test/**/*.js"
   },
