@@ -1,7 +1,6 @@
 'use strict';
 
 import supertest from 'supertest';
-import chai from 'chai';
 import {app} from '../src/index';
 
 const request = supertest(app);

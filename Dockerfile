@@ -7,6 +7,7 @@ RUN chown -R node:node /usr/local/app
 USER node
 
 COPY package*.json  ./
+COPY .babelrc ./
 RUN npm install
 
 

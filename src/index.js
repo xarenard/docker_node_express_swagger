@@ -20,7 +20,7 @@ app.use((req, res) => {
 });
 
 app.listen(PORT, () => {
-	logger.debug('Server started');
+	logger.info( `Server started on port: ${PORT}`);
 });
 
 

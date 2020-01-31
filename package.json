@@ -17,8 +17,6 @@
   "author": "Xavier Foxy",
   "license": "ISC",
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
     "express": "^4.16.3",
     "jsdoc": "^3.5.5",
     "morgan": "^1.9.0",
@@ -27,6 +25,10 @@
     "winston": "^3.0.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
     "apidoc": "^0.17.6",
     "babel-register": "^6.26.0",
     "chai": "^4.1.2",
