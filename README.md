@@ -2,7 +2,7 @@
 Simple Docker build with node express
 
 
-#Without docker
+# Without docker
 
 ## endpoint
 
@@ -15,6 +15,8 @@ http://localhost:8084/api/echo/v1
 ```
 npm i
 npm start
+# or to listen to another port than 8084
+PORT 9090 npm start
 ```
 
 # With Docker
