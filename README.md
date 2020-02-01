@@ -26,7 +26,7 @@ $docker build . -t foxy/node-api-echo
 $docker images
   REPOSITORY           TAG                 IMAGE ID            CREATED             SIZE
   foxy/node-api-echo      latest              4ee3e8311189        2 minutes ago       971MB
-$docker run -d --name node-api-echo -p 9090:8084 foxy/node-api-echo
+$docker run -d --name node-api-echo -p 8084:8084 foxy/node-api-echo
 e33878430fe57d577cc77ec99dcb51763999f6b78bcfa883f1a59197cc842889
 $docker ps
 CONTAINER ID        IMAGE                COMMAND                  CREATED             STATUS              PORTS                    NAMES
