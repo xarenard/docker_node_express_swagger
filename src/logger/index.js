@@ -14,27 +14,37 @@ if (!fs.existsSync(logDir)) {
 	fs.mkdirSync(logDir);
 }
 
+const transportsOutput = [];
+
+transportsOutput.push(
+	new transports.File({
+		level: 'info',
+		filename: `${logDir}/access.log`,
+		handleExceptions: true,
+		json: false,
+		maxsize: 5242880, //5MB
+		maxFiles: 5,
+		colorize: false
+	})
+);
+
+transportsOutput.push(
+	new transports.Console({
+		colorize: true,
+		level: 'info',
+		json: false
+	})
+);
+
+
 const logger = createLogger({
+	silent: process.env.NODE_ENV === 'test',
 	format: combine(
 		format.simple(),
 		morganFormat
 	),
-	transports: [
-		new transports.File({
-			level: 'info',
-			filename: `${logDir}/access.log`,
-			handleExceptions: true,
-			json: false,
-			maxsize: 5242880, //5MB
-			maxFiles: 5,
-			colorize: false
-		})
-		/*		new transports.Console({
-			colorize: true,
-			level: 'debug',
-			json: false
-		})*/
-	]
+	transports: transportsOutput,
+
 });
 
 const stream = {

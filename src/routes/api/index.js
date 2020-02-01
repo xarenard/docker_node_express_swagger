@@ -37,4 +37,4 @@ router.get('/healthcheck', (request, response) => {
 	response.status(204).send();
 });
 
-module.exports = {router};
+export  {router as apirouter};
