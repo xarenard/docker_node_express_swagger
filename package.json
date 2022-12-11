@@ -18,7 +18,7 @@
   "author": "Xavier Foxy",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jsdoc": "^3.6.7",
     "minimatch": "^3.0.4",
     "morgan": "^1.9.0",
